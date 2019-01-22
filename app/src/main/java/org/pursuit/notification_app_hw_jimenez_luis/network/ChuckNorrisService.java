@@ -13,7 +13,7 @@ public interface ChuckNorrisService {
     @GET("api.chucknorris.io/jokes/categories")
     Call<JokeCategory> getJokeCategories();
 
-    @GET("api/breed/{type}/images/random")
-    Call<Joke> getDogImage(@Path("type") String breed);
+    @GET("https://api.chucknorris.io/jokes/random?category={category}")
+    Call<Joke> getJoke(@Path("category") String jokeType);
 }
 
