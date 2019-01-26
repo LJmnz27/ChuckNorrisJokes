@@ -9,6 +9,7 @@ public class Joke {
     private String id;
     private String url;
     private String value;
+
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public Object getCategory() {

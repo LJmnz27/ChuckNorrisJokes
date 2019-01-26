@@ -14,6 +14,6 @@ public interface ChuckNorrisService {
     Call<JokeCategory> getJokeCategories();
 
     @GET("https://api.chucknorris.io/jokes/random?category={category}")
-    Call<Joke> getJoke(@Path("category") String jokeType);
+    Call<Joke> getJokeId(@Path("category") String jokeId);
 }
 
