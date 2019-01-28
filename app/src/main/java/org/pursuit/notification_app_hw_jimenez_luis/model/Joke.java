@@ -1,62 +1,61 @@
 package org.pursuit.notification_app_hw_jimenez_luis.model;
 
-import java.util.HashMap;
-import java.util.Map;
+public class Joke{
+	private String iconUrl;
+	private String id;
+	private Object category;
+	private String value;
+	private String url;
 
-public class Joke {
-    private Object category;
-    private String iconUrl;
-    private String id;
-    private String url;
-    private String value;
+	public void setIconUrl(String iconUrl){
+		this.iconUrl = iconUrl;
+	}
 
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+	public String getIconUrl(){
+		return iconUrl;
+	}
 
-    public Object getCategory() {
-        return category;
-    }
+	public void setId(String id){
+		this.id = id;
+	}
 
-    public void setCategory(Object category) {
-        this.category = category;
-    }
+	public String getId(){
+		return id;
+	}
 
-    public String getIconUrl() {
-        return iconUrl;
-    }
+	public void setCategory(Object category){
+		this.category = category;
+	}
 
-    public void setIconUrl(String iconUrl) {
-        this.iconUrl = iconUrl;
-    }
+	public Object getCategory(){
+		return category;
+	}
 
-    public String getId() {
-        return id;
-    }
+	public void setValue(String value){
+		this.value = value;
+	}
 
-    public void setId(String id) {
-        this.id = id;
-    }
+	public String getValue(){
+		return value;
+	}
 
-    public String getUrl() {
-        return url;
-    }
+	public void setUrl(String url){
+		this.url = url;
+	}
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+	public String getUrl(){
+		return url;
+	}
 
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
+	@Override
+ 	public String toString(){
+		return 
+			"Joke{" + 
+			"icon_url = '" + iconUrl + '\'' + 
+			",id = '" + id + '\'' + 
+			",category = '" + category + '\'' + 
+			",value = '" + value + '\'' + 
+			",url = '" + url + '\'' + 
+			"}";
+		}
 }
