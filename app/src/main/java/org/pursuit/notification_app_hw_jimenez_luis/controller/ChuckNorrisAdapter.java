@@ -11,8 +11,11 @@ import org.pursuit.notification_app_hw_jimenez_luis.view.ChuckNorrisViewHolder;
 
 import java.util.List;
 
+/**
+ * Command+Option+L
+ */
 public class ChuckNorrisAdapter extends RecyclerView.Adapter<ChuckNorrisViewHolder> {
-    List<String> jokesList;
+    List<String> jokesList;     // Should be private;
 
     public  ChuckNorrisAdapter(List<String> jokesList){
         this.jokesList =jokesList;
@@ -30,6 +33,7 @@ public class ChuckNorrisAdapter extends RecyclerView.Adapter<ChuckNorrisViewHold
         chuckNorrisViewHolder.onBind(jokesList.get(i));
     }
 
+    // Your recyclerview is never going to show anything if you tell it to show 0 items.
     @Override
     public int getItemCount() {
         return 0;

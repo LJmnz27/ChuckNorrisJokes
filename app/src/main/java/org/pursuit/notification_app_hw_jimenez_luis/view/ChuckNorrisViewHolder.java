@@ -33,6 +33,7 @@ public class ChuckNorrisViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         sharedPreferences = itemView.getContext().getApplicationContext().getSharedPreferences(TAG, Context.MODE_PRIVATE);
         chuckNorrisTextView = itemView.findViewById(R.id.chuck_norris_text_view);
+        // Woah. You don't need to getSharedPreferences twice.
         sharedPreferences = itemView.getContext().getApplicationContext().getSharedPreferences(TAG,Context.MODE_PRIVATE);
     }
 
@@ -42,12 +43,16 @@ public class ChuckNorrisViewHolder extends RecyclerView.ViewHolder {
         @Override
         public void onClick(View v) {
             intent = new Intent(itemView.getContext(), SecondActivity.class);
+            // You're putting Extra twice.
             intent.putExtra("joke", joke);
 
             if (sharedPreferences.contains((joke + "joke"))) {
                 intent.putExtra("joke", sharedPreferences.getString((joke + "joke"), null));
                 itemView.getContext().startActivity(intent);
             }else {
+
+                // What's the purpose of making another retrofit call?
+                // Shouldn't your joke object contain everything you need?
                 Retrofit retrofit = RetrofitSingleton.getInstance();
                 ChuckNorrisService chuckNorrisService = retrofit.create(ChuckNorrisService.class);
                 Call<Joke> jokeCall = chuckNorrisService.getJokeId(joke);

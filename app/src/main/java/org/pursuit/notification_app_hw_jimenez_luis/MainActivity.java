@@ -20,7 +20,7 @@ import retrofit2.Retrofit;
 public class MainActivity extends AppCompatActivity {
 
     private  static final String TAG = "Jokes_all";
-    RecyclerView recyclerView;
+    RecyclerView recyclerView;      // Should be a private field
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Joke> call, Throwable t) {
-
+                // Should do some logging here.
             }
         });
     }

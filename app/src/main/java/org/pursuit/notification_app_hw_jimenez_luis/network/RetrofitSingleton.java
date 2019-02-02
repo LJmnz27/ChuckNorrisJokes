@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitSingleton {
 
-
+        // So many empty lines!
         private static Retrofit ourInstance;
 
 

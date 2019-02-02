@@ -9,7 +9,7 @@ import retrofit2.http.Path;
 
 public interface ChuckNorrisService {
 
-
+    // Unused Call. Don't need
     @GET("api.chucknorris.io/jokes/categories")
     Call<JokeCategory> getJokeCategories();
 
