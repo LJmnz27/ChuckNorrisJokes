@@ -1,5 +1,9 @@
 package org.pursuit.notification_app_hw_jimenez_luis.model;
 
+/**
+ * No need for setters if you aren't going to use them.
+ * I like your overridden toString method.
+ */
 public class Joke{
 	private String iconUrl;
 	private String id;
